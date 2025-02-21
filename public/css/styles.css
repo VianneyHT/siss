@@ -1,0 +1,182 @@
+/* ============================
+   Reset y estilos base
+=============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ============================
+   Fondos Diferentes
+=============================== */
+/* Para la página de login */
+body.login-page {
+  background-image: url('../images/tesci.png'); /* Reemplaza con la ruta de tu imagen para login */
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+/* Para el resto del sistema */
+body.system-page {
+  background-image: url('../images/rino.png'); /* Reemplaza con la ruta de tu imagen para el sistema */
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+/* ============================
+   Contenedor Principal
+=============================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ============================
+   Encabezado
+=============================== */
+header {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ============================
+   Formularios y Secciones
+=============================== */
+form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+/* ============================
+   Tablas y Listados (Estilo Moderno)
+=============================== */
+table {
+  width: auto;              /* Se ajusta al contenido */
+  max-width: 80%;           /* No abarca más del 80% del ancho de la pantalla */
+  margin: 20px auto;        /* Centrado horizontal con margen vertical */
+  border-collapse: collapse;
+  background-color: #fff;   /* Fondo blanco */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+  border-radius: 8px;       /* Bordes redondeados (opcional) */
+  overflow: hidden;         /* Para que los bordes redondeados se apliquen bien */
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff; /* Color de fondo para el encabezado */
+  color: #fff;               /* Texto blanco en el encabezado */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Opcional: Alternar colores en las filas para mayor legibilidad */
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+/* ============================
+   Enlaces
+=============================== */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* ============================
+   Mensajes de Error y Éxito
+=============================== */
+p.error {
+  color: #d9534f;
+  margin: 10px 0;
+}
+
+p.success {
+  color: #5cb85c;
+  margin: 10px 0;
+}
+
+/* ============================
+   Responsividad
+=============================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+}
